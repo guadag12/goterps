@@ -5,11 +5,12 @@
 #' @import ggplot2, showtext, rsvg, grid
 #' @export
 #'
-logo <- png::readPNG("https://github.com/guadag12/goterps/raw/main/img/logo.png")
-logo_grob <- rasterGrob(logo, interpolate = TRUE)
-print(logo_grob)
 
-theme_custom_with_logo <- function() {
+
+goterps_theme_logo <- function() {
+  logo <- png::readPNG("https://github.com/guadag12/goterps/raw/main/img/logo.png")
+  logo_grob <- rasterGrob(logo, interpolate = TRUE)
+
   theme_minimal(base_family = "Arial") +
     theme(
       plot.title = element_text(family = "CustomFont", face = "bold", color = "#CC0000", size = 20),

@@ -1,3 +1,5 @@
+# Ignore specific R script
+check_guada.R
 .Rproj.user
 .Rhistory
 .RData

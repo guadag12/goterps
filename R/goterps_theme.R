@@ -7,7 +7,7 @@
 
 
 # Crear el tema personalizado
-theme_custom <- function() {
+goterps_theme <- function() {
   theme_minimal(base_family = "Arial") +  # Set a default font family for the rest
     theme(
       # Title with custom font

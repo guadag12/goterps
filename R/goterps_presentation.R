@@ -3,11 +3,6 @@
 #' This function creates a new project structure in a specified directory and duplicates all necessary files.
 #' @param path The path where the project structure should be created and files duplicated.
 #' @export
-#' Create and Duplicate Project Structure
-#'
-#' This function creates a new project structure in a specified directory and duplicates all necessary files.
-#' @param path The path where the project structure should be created and files duplicated.
-#' @export
 
 # Function to recursively copy files and folders
 goterps_presentation <- function(source_dir, path) {
@@ -30,7 +25,7 @@ goterps_presentation <- function(source_dir, path) {
       if (!dir.exists(dest_path)) {  # Ensure the directory exists in the destination
         dir.create(dest_path, recursive = TRUE)
       }
-      go_terps_presentation(item, dest_path)
+      goterps_presentation(item, dest_path)
     } else {
       # Copy the file to the destination
       file.copy(item, dest_path)
@@ -38,6 +33,4 @@ goterps_presentation <- function(source_dir, path) {
   }
 }
 
-# duplicate_files("~/GitHub/goterps/inst/extdata/_extensions", "path/to/your/new/location")
-
-goterps_presentation("~/GitHub/goterps/inst/extdata/_extensions", "~/GitHub/test")
+#goterps_presentation("~/GitHub/goterps/inst/extdata/_extensions", "~/GitHub/test")

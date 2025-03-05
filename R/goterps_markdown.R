@@ -19,7 +19,7 @@
 #' @param path The directory where the new presentation should be created.
 #' @export
 
-go_terps_markdown <- function(path) {
+goterps_markdown <- function(path) {
   template_dir <- system.file("template", package = "goterps")
   file.copy(template_dir, path, recursive = TRUE)
   message("Template copied to ", path)
