@@ -24,7 +24,7 @@ library(goterps)
  Running this function sends the package template to the path you want on your computer:
  
 ``` r
-goterps_presentation(screen.name = "~/Documents/test/")
+goterps_presentation(path = "~/Documents/test/")
 ```
 
 ## Contact ❤️
