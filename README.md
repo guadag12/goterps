@@ -2,7 +2,7 @@
   
   # goterps 🐢❤️📦  <img src="img/hex/logo.png" width="160px" align="right" />
 
-![version](https://img.shields.io/badge/version-0.0.0.9-green) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![](https://visitor-badge.glitch.me/badge?page_id=guadag12.goterps&style=flat-square&color=0088cc) 
+![version](https://img.shields.io/badge/version-0.0.0.1-green) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![](https://visitor-badge.glitch.me/badge?page_id=guadag12.goterps&style=flat-square&color=0088cc) 
 
 This is an R package called __"goterps"__. It is designed for students and teachers of the University of Maryland to download templates to create presentations with the university logo, as well as articles and use the university theme in ggplot2.
 
