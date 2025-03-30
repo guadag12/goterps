@@ -5,13 +5,20 @@
 #' @export
 
 # Function to recursively copy files and folders
-goterps_presentation <- function(path) {
+goterps_presentation <- function(item, dest_path) {
+  # This function requires only the destination path; it assumes the item is the source dir
 
-  package_path <- find.package("goterps")
-  source_dir<- paste0(package_path,"/extdata/_extensions")
+  # Automatically find the path of the 'goterps' package and set the source directory
+  source_dir <- system.file("extdata/_extensions", package = "goterps")
+
+  # Ensure the source directory exists
+  if (!dir.exists(source_dir)) {
+    stop("Source directory does not exist:", source_dir)
+  }
+
   # Create the destination directory if it does not exist
-  if (!dir.exists(path)) {
-    dir.create(path, recursive = TRUE)
+  if (!dir.exists(dest_path)) {
+    dir.create(dest_path, recursive = TRUE)
   }
 
   # List all files and folders in the source directory
@@ -19,21 +26,22 @@ goterps_presentation <- function(path) {
 
   # Loop through each item in the source directory
   for (item in files_folders) {
-    # Set the destination path for the current item
-    dest_path <- file.path(path, basename(item))
+    # Define the destination path for the current item
+    current_dest_path <- file.path(dest_path, basename(item))
 
-    # Check if the item is a directory
+    # Check if the current item is a directory
     if (dir.exists(item)) {
       # Recursively call the function for the directory
-      if (!dir.exists(dest_path)) {  # Ensure the directory exists in the destination
-        dir.create(dest_path, recursive = TRUE)
+      if (!dir.exists(current_dest_path)) {  # Ensure the directory exists at the destination
+        dir.create(current_dest_path, recursive = TRUE)
       }
-      goterps_presentation(item, dest_path)
+      goterps_presentation(item, current_dest_path)  # Recursive function call
     } else {
       # Copy the file to the destination
-      file.copy(item, dest_path)
+      file.copy(item, current_dest_path)
     }
   }
 }
 
-#goterps_presentation("~/GitHub/goterps/inst/extdata/_extensions", "~/GitHub/test")
+# Example of how to call the function
+# goterps_presentation("/path/to/destination")
