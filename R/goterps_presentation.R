@@ -5,7 +5,10 @@
 #' @export
 
 # Function to recursively copy files and folders
-goterps_presentation <- function(source_dir, path) {
+goterps_presentation <- function(path) {
+
+  package_path <- find.package("goterps")
+  source_dir<- paste0(package_path,"/extdata/_extensions")
   # Create the destination directory if it does not exist
   if (!dir.exists(path)) {
     dir.create(path, recursive = TRUE)
