@@ -87,3 +87,5 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
 ## Contact ❤️
 
 If you encounter a bug please make an issue! Feel free to write me with doubts to my gmail: guadag12@umd.edu or send me a DM on Twitter: [guadag12](https://twitter.com/guadag12) 
+
+The hex logo design is inspired by [Harriet Goers's work](https://hgoers.github.io/GVPT622/).
