@@ -11,14 +11,14 @@ goterps_presentation <- function(path) {
 
   download.file(url = "https://github.com/guadag12/goterps/blob/main/inst/extdata/_extensions/quarto_presentation.zip",
                 destfile = zip_file_path)
-  if(!dir.exists(dest_dir)) {
-    dir.create(dest_dir)
+  if(!dir.exists(path)) {
+    dir.create(path)
   } else {
     unlink(dest_dir, recursive = TRUE)
-    dir.create(dest_dir)
+    dir.create(path)
   }
 
-  unzip(zipfile = zip_file_path, exdir = dest_dir)
+  unzip(zipfile = zip_file_path, exdir = path)
   unlink(zip_file_path)
 
 }
