@@ -24,7 +24,7 @@ library(goterps)
 This function runs the package template and saves it to the specified path on your computer:
 
 ``` r
-goterps_presentation(path = "~/Documents/test/")
+goterps_presentation(dest_dir = "~/Documents/test/")
 ```
 
 <img src="https://github.com/guadag12/goterps/blob/main/img/quarto_template1.png" width="500" /> <img src="https://github.com/guadag12/goterps/blob/main/img/quarto_template2.png" width="500" />
