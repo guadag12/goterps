@@ -4,10 +4,10 @@
 \alias{goterps_presentation}
 \title{Create and Duplicate Project Structure}
 \usage{
-goterps_presentation(path)
+goterps_presentation(item, dest_dir)
 }
 \arguments{
-\item{path}{The path where the project structure should be created and files duplicated.}
+\item{dest_dir}{The path where the project structure should be created and files duplicated.}
 }
 \description{
 This function creates a new project structure in a specified directory and duplicates all necessary files.
