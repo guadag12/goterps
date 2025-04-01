@@ -40,7 +40,7 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
 ```
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/guadag12/goterps/blob/main/img/scatter_plain.png">
+  <img width="500" height="300" src="https://github.com/guadag12/goterps/blob/main/img/scatter_plain.png">
 </p>
 
 
