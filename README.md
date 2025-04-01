@@ -4,7 +4,7 @@
 
 ![version](https://img.shields.io/badge/version-0.0.0.1-green) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![](https://visitor-badge.glitch.me/badge?page_id=guadag12.goterps&style=flat-square&color=0088cc) 
 
-This R package is designed for students and teachers of the University of Maryland to download templates to create presentations with the university logo, as well as articles and use the university theme in ggplot2.
+This R package is designed for students and teachers of the University of Maryland to download templates to create presentations with the university logo, as well as use the university theme and palette in ggplot2.
 
 <!-- Use twitter from R. Get started by reading `vignette("rtweet")`. -->
   
