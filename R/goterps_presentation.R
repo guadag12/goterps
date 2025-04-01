@@ -14,7 +14,7 @@ goterps_presentation <- function(path) {
   if(!dir.exists(path)) {
     dir.create(path)
   } else {
-    unlink(dest_dir, recursive = TRUE)
+    unlink(path, recursive = TRUE)
     dir.create(path)
   }
 
