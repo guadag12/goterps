@@ -5,43 +5,23 @@
 #' @export
 
 # Function to recursively copy files and folders
-goterps_presentation <- function(item, dest_path) {
-  # This function requires only the destination path; it assumes the item is the source dir
+goterps_presentation <- function(item, dest_dir) {
 
-  # Automatically find the path of the 'goterps' package and set the source directory
-  source_dir <- system.file("extdata/_extensions", package = "goterps")
+  zip_file_path <- paste0(dest_dir, ".zip")
 
-  # Ensure the source directory exists
-  if (!dir.exists(source_dir)) {
-    stop("Source directory does not exist:", source_dir)
+  download.file(url = "https://github.com/guadag12/goterps/raw/main/inst/extdata/_extensions.zip",
+                destfile = zip_file_path)
+  if(!dir.exists(dest_dir)) {
+    dir.create(dest_dir)
+  } else {
+    unlink(dest_dir, recursive = TRUE)
+    dir.create(dest_dir)
   }
 
-  # Create the destination directory if it does not exist
-  if (!dir.exists(dest_path)) {
-    dir.create(dest_path, recursive = TRUE)
-  }
+  unzip(zipfile = zip_file_path, exdir = dest_dir)
+  unlink(zip_file_path)
 
-  # List all files and folders in the source directory
-  files_folders <- list.files(source_dir, full.names = TRUE)
-
-  # Loop through each item in the source directory
-  for (item in files_folders) {
-    # Define the destination path for the current item
-    current_dest_path <- file.path(dest_path, basename(item))
-
-    # Check if the current item is a directory
-    if (dir.exists(item)) {
-      # Recursively call the function for the directory
-      if (!dir.exists(current_dest_path)) {  # Ensure the directory exists at the destination
-        dir.create(current_dest_path, recursive = TRUE)
-      }
-      goterps_presentation(item, current_dest_path)  # Recursive function call
-    } else {
-      # Copy the file to the destination
-      file.copy(item, current_dest_path)
-    }
-  }
 }
 
 # Example of how to call the function
-# goterps_presentation("/path/to/destination")
+# goterps_presentation("C:/Users/User/Documents/GitHub/goterps_presentation")
