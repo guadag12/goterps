@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
   
-  # goterps 🐢❤️📦  <img src="img/hex/logo.png" width="160px" align="right" />
+  # goterps 🐢❤️📦  <img src="img/hex/hex_goterps_logo.png" width="160px" align="right" />
 
 ![version](https://img.shields.io/badge/version-0.0.0.1-green) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![](https://visitor-badge.glitch.me/badge?page_id=guadag12.goterps&style=flat-square&color=0088cc) 
 
