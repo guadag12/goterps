@@ -22,6 +22,8 @@ format:
     footer-logo-link: "https://umd.edu/"
     chalkboard: true
     smaller: true
+    code-fold: true
+    code-tools: true
     title-slide-attributes:
       data-background-color: "#e21833"
 from: markdown+emoji
@@ -176,6 +178,8 @@ Source: Office of Institutional Research, Planning & Assessment at University of
 
 :::
 :::
+
+
 ---
 
 ## Inverse Slide {.inverse}
@@ -251,6 +255,76 @@ Use this when the viewer have to pay attention to something.
 
 :::
 
+---
+
+## goterps R package has also a theme in ggplot2!
+
+```{r, eval=FALSE}
+library(ggplot2)
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point(size = 4) +
+  goterps_theme() +
+  scale_fill_manual(values = goterps_palette_d()) +
+  labs(title = "Scatter Plot of Iris Data Colored by Species",
+       x = "Sepal Length",
+       y = "Sepal Width")
+```
+
+![](https://github.com/guadag12/goterps/raw/main/img/scatter_plain.png)
+
+
+---
+
+## Have palette of colors for discrete variables: 
+
+```{r, eval=FALSE}
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(size = 4) +
+  scale_color_manual(values = goterps_palette_d(3)) +
+  goterps_theme() +
+  scale_fill_manual(values = goterps_palette_d()) +
+  labs(title = "Scatter Plot of Iris Data Colored by Species",
+       x = "Sepal Length",
+       y = "Sepal Width",
+       color = "Species")
+```
+
+![](https://github.com/guadag12/goterps/raw/main/img/scatter_discrete_plot.png)
+
+
+---
+
+## And have palette of colors for continuous variables: 
+
+```{r, eval=FALSE}
+library(ggplot2)
+p1 <- ggplot(iris[iris$Species == "setosa",], aes(x = Sepal.Width, y = Sepal.Length, color = Sepal.Length)) +
+  geom_point(size = 4) +
+  scale_color_gradientn(colors = goterps_palette_c("yellow",5)) +
+  labs(x = "Sepal Width", y = "Sepal Length",
+       title = "Scatter Plot of Iris Data Colored by Species") +
+  goterps_theme() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p2 <-ggplot(iris[iris$Species == "versicolor",], aes(x = Sepal.Width, y = Sepal.Length, color = Sepal.Length)) +
+  geom_point(size = 4) +
+  scale_color_gradientn(colors = goterps_palette_c("red",5)) +
+  labs(x = "Sepal Width", y = "Sepal Length") +
+  goterps_theme() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p3 <-ggplot(iris[iris$Species == "virginica",], aes(x = Sepal.Width, y = Sepal.Length, color = Sepal.Length)) +
+  geom_point(size = 4) +
+  scale_color_gradientn(colors = goterps_palette_c("grey",5)) +
+  labs(x = "Sepal Width", y = "Sepal Length") +
+  goterps_theme() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+grid.arrange(p1, p2, p3)
+```
+
+![](https://github.com/guadag12/goterps/raw/main/img/scatter_continuous_plot.png)
+
 
 
 ---
@@ -263,7 +337,7 @@ Use this when the viewer have to pay attention to something.
 
 ::: {.center .middle}
 
-## Thank You for Your Attention
+## Thank You for Your Attention! Questions?
 
 </br>
 

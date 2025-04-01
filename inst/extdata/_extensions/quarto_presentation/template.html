@@ -523,8 +523,11 @@
 <h2>Show your R code!</h2>
 <p>Code can be embebed in Quarto like this:</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>result <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
 <span id="cb1-2"><a href=""></a>result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
@@ -534,7 +537,10 @@
 <h2>O don’t show it, show the results only!</h2>
 <p>We can hide the code and show the results only:</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">cat</span>(<span class="st">"Go terps!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Go terps!</code></pre>
 </div>
@@ -652,6 +658,74 @@
 </div>
 </div>
 </section>
+<section id="goterps-r-package-has-also-a-theme-in-ggplot2" class="slide level2">
+<h2>goterps R package has also a theme in ggplot2!</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-2"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span></span>
+<span id="cb5-3"><a href=""></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb5-4"><a href=""></a>  <span class="fu">goterps_theme</span>() <span class="sc">+</span></span>
+<span id="cb5-5"><a href=""></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">goterps_palette_d</span>()) <span class="sc">+</span></span>
+<span id="cb5-6"><a href=""></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Scatter Plot of Iris Data Colored by Species"</span>,</span>
+<span id="cb5-7"><a href=""></a>       <span class="at">x =</span> <span class="st">"Sepal Length"</span>,</span>
+<span id="cb5-8"><a href=""></a>       <span class="at">y =</span> <span class="st">"Sepal Width"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+
+<img data-src="https://github.com/guadag12/goterps/raw/main/img/scatter_plain.png" class="r-stretch"></section>
+<section id="have-palette-of-colors-for-discrete-variables" class="slide level2">
+<h2>Have palette of colors for discrete variables:</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span></span>
+<span id="cb6-2"><a href=""></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb6-3"><a href=""></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">goterps_palette_d</span>(<span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb6-4"><a href=""></a>  <span class="fu">goterps_theme</span>() <span class="sc">+</span></span>
+<span id="cb6-5"><a href=""></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">goterps_palette_d</span>()) <span class="sc">+</span></span>
+<span id="cb6-6"><a href=""></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Scatter Plot of Iris Data Colored by Species"</span>,</span>
+<span id="cb6-7"><a href=""></a>       <span class="at">x =</span> <span class="st">"Sepal Length"</span>,</span>
+<span id="cb6-8"><a href=""></a>       <span class="at">y =</span> <span class="st">"Sepal Width"</span>,</span>
+<span id="cb6-9"><a href=""></a>       <span class="at">color =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+
+<img data-src="https://github.com/guadag12/goterps/raw/main/img/scatter_discrete_plot.png" class="r-stretch"></section>
+<section id="and-have-palette-of-colors-for-continuous-variables" class="slide level2">
+<h2>And have palette of colors for continuous variables:</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb7-2"><a href=""></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(iris[iris<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">"setosa"</span>,], <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Width, <span class="at">y =</span> Sepal.Length, <span class="at">color =</span> Sepal.Length)) <span class="sc">+</span></span>
+<span id="cb7-3"><a href=""></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb7-4"><a href=""></a>  <span class="fu">scale_color_gradientn</span>(<span class="at">colors =</span> <span class="fu">goterps_palette_c</span>(<span class="st">"yellow"</span>,<span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb7-5"><a href=""></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Sepal Width"</span>, <span class="at">y =</span> <span class="st">"Sepal Length"</span>,</span>
+<span id="cb7-6"><a href=""></a>       <span class="at">title =</span> <span class="st">"Scatter Plot of Iris Data Colored by Species"</span>) <span class="sc">+</span></span>
+<span id="cb7-7"><a href=""></a>  <span class="fu">goterps_theme</span>() <span class="sc">+</span></span>
+<span id="cb7-8"><a href=""></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span>
+<span id="cb7-9"><a href=""></a></span>
+<span id="cb7-10"><a href=""></a>p2 <span class="ot">&lt;-</span><span class="fu">ggplot</span>(iris[iris<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">"versicolor"</span>,], <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Width, <span class="at">y =</span> Sepal.Length, <span class="at">color =</span> Sepal.Length)) <span class="sc">+</span></span>
+<span id="cb7-11"><a href=""></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb7-12"><a href=""></a>  <span class="fu">scale_color_gradientn</span>(<span class="at">colors =</span> <span class="fu">goterps_palette_c</span>(<span class="st">"red"</span>,<span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb7-13"><a href=""></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Sepal Width"</span>, <span class="at">y =</span> <span class="st">"Sepal Length"</span>) <span class="sc">+</span></span>
+<span id="cb7-14"><a href=""></a>  <span class="fu">goterps_theme</span>() <span class="sc">+</span></span>
+<span id="cb7-15"><a href=""></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span>
+<span id="cb7-16"><a href=""></a></span>
+<span id="cb7-17"><a href=""></a>p3 <span class="ot">&lt;-</span><span class="fu">ggplot</span>(iris[iris<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">"virginica"</span>,], <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Width, <span class="at">y =</span> Sepal.Length, <span class="at">color =</span> Sepal.Length)) <span class="sc">+</span></span>
+<span id="cb7-18"><a href=""></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb7-19"><a href=""></a>  <span class="fu">scale_color_gradientn</span>(<span class="at">colors =</span> <span class="fu">goterps_palette_c</span>(<span class="st">"grey"</span>,<span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb7-20"><a href=""></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Sepal Width"</span>, <span class="at">y =</span> <span class="st">"Sepal Length"</span>) <span class="sc">+</span></span>
+<span id="cb7-21"><a href=""></a>  <span class="fu">goterps_theme</span>() <span class="sc">+</span></span>
+<span id="cb7-22"><a href=""></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span>
+<span id="cb7-23"><a href=""></a></span>
+<span id="cb7-24"><a href=""></a><span class="fu">grid.arrange</span>(p1, p2, p3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+
+<img data-src="https://github.com/guadag12/goterps/raw/main/img/scatter_continuous_plot.png" class="r-stretch"></section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
@@ -660,8 +734,8 @@ Perkel, J. M. 2023. <span>“Six Tips for Better Coding with ChatGPT.”</span> 
 </div>
 </div>
 </section>
-<section id="thank-you-for-your-attention" class="slide level2 center middle">
-<h2>Thank You for Your Attention</h2>
+<section id="thank-you-for-your-attention-questions" class="slide level2 center middle">
+<h2>Thank You for Your Attention! Questions?</h2>
 <p><br></p>
 <p><a href="mailto:guadag12@umd.edu"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"></path></svg> guadag12@umd.edu</a></p>
 <p><a href="https://guadagonzalez.com/"><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"></path></svg> https://guadagonzalez.com/</a></p>
