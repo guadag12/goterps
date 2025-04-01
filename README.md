@@ -26,6 +26,7 @@ This function runs the package template and saves it to the specified path on yo
 ``` r
 goterps_presentation(path = "~/Documents/test/")
 ```
+![](https://github.com/guadag12/goterps/blob/main/img/quarto_template1.png) ![](https://github.com/guadag12/goterps/blob/main/img/quarto_template2.png)
 
 ### Make thematic plots in ggplot with goterps template!
 
