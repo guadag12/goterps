@@ -5,11 +5,11 @@
 #' @export
 
 # Function to recursively copy files and folders
-goterps_presentation <- function(item, dest_dir) {
+goterps_presentation <- function(path) {
 
-  zip_file_path <- paste0(dest_dir, ".zip")
+  zip_file_path <- paste0(path, ".zip")
 
-  download.file(url = "https://github.com/guadag12/goterps/raw/main/inst/extdata/_extensions.zip",
+  download.file(url = "https://github.com/guadag12/goterps/blob/main/inst/extdata/_extensions/quarto_presentation.zip",
                 destfile = zip_file_path)
   if(!dir.exists(dest_dir)) {
     dir.create(dest_dir)

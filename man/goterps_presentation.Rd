@@ -4,7 +4,7 @@
 \alias{goterps_presentation}
 \title{Create and Duplicate Project Structure}
 \usage{
-goterps_presentation(item, dest_dir)
+goterps_presentation(path)
 }
 \arguments{
 \item{path}{The path where the project structure should be created and files duplicated.}
