@@ -38,7 +38,10 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
        x = "Sepal Length",
        y = "Sepal Width")
 ```
-![](https://github.com/guadag12/goterps/raw/main/img/scatter_discrete_plot.png)
+
+<p align="center">
+  <img width="460" height="330" src="https://github.com/guadag12/goterps/blob/main/img/scatter_plain.png">
+</p>
 
 
 ### Add UMD colors for discrete variables!
@@ -55,7 +58,10 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
        color = "Species")
 ```
 
-![](https://github.com/guadag12/goterps/raw/main/img/scatter_discrete_plot.png)
+<p align="center">
+  <img width="460" height="330" src="https://github.com/guadag12/goterps/blob/main/img/scatter1.png">
+</p>
+
 
 ### Add UMD colors for continuous  variables!
 
@@ -71,8 +77,9 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
        y = "Sepal Width",
        color = "Species")
 ```
-
-![](https://github.com/guadag12/goterps/raw/main/img/scatter_discrete_plot.png)
+<p align="center">
+  <img width="460" height="330" src="https://github.com/guadag12/goterps/blob/main/img/scales_continuos.png">
+</p>
 
 
 ## Contact ❤️
