@@ -55,7 +55,7 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
        color = "Species")
 ```
 
-![](https://github.com/guadag12/goterps/raw/main/img/scatter_discrete_plot.png)
+![](https://github.com/guadag12/goterps/blob/main/img/scatter1.png)
 
 ### Add UMD colors for continuous  variables!
 
