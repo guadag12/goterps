@@ -28,6 +28,7 @@ goterps_presentation(path = "~/Documents/test/")
 ```
 
 ### Make thematic plots in ggplot with goterps template!
+
 ``` r
 ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
   geom_point(size = 4) +
@@ -40,7 +41,7 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
        color = "Species")
 ```
 
-![]()
+![](https://github.com/guadag12/goterps/raw/main/img/scatter_discrete_plot.png)
 
 ## Contact ❤️
 
