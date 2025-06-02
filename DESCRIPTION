@@ -1,17 +1,16 @@
 Package: goterps
 Type: Package
-Title: What the Package Does (Title Case)
+Title: UMD-College Park Template
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Guadalupe", "Gonzalez",
+      email = "guadag12@umd.edu",
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: This R package is designed for students and teachers of the University of Maryland to download templates to create presentations with the university logo, as well as use the university theme and palette in ggplot2.
+License: MIT
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
