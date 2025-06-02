@@ -1,6 +1,9 @@
-#' Custom ggplot scale of colors for discrete variable.
+#' Custom ggplot scale of colors for continuous variables.
 #'
-#' This function applies a scale of UMD colors to discrete ggplot objects.
+#' This function applies a scale of UMD colors to continuous ggplot objects.
+#'
+#' @param theme A character string. The base color theme to use. Options are "yellow", "red", or "grey".
+#' @param n An integer. Number of gradient colors to generate.
 #'
 #' @import ggplot2
 #' @export

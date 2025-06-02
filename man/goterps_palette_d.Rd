@@ -2,10 +2,15 @@
 % Please edit documentation in R/goterps_palette_d.R
 \name{goterps_palette_d}
 \alias{goterps_palette_d}
-\title{Custom ggplot scale of colors for discrete variable.}
+\title{Custom ggplot scale of colors for continuous variables.}
 \usage{
 goterps_palette_d(n)
 }
+\arguments{
+\item{n}{An integer. Number of gradient colors to generate.}
+
+\item{theme}{A character string. The base color theme to use. Options are "yellow", "red", or "grey".}
+}
 \description{
-This function applies a scale of UMD colors to discrete ggplot objects.
+This function applies a scale of UMD colors to continuous ggplot objects.
 }

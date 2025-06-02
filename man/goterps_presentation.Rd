@@ -7,6 +7,8 @@
 goterps_presentation(item, dest_dir)
 }
 \arguments{
+\item{item}{Not currently used.}
+
 \item{dest_dir}{The path where the project structure should be created and files duplicated.}
 }
 \description{

@@ -1,6 +1,7 @@
 #' Create and Duplicate Project Structure
 #'
 #' This function creates a new project structure in a specified directory and duplicates all necessary files.
+#' @param item Not currently used.
 #' @param dest_dir The path where the project structure should be created and files duplicated.
 #' @export
 

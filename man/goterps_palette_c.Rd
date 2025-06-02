@@ -6,6 +6,11 @@
 \usage{
 goterps_palette_c(theme, n)
 }
+\arguments{
+\item{theme}{A character string. The base color theme to use. Options are "yellow", "red", or "grey".}
+
+\item{n}{An integer. Number of gradient colors to generate.}
+}
 \description{
 This function applies a scale of UMD colors to continuous ggplot objects.
 }
