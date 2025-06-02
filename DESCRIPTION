@@ -1,6 +1,6 @@
 Package: goterps
 Type: Package
-Title: UMD-College Park Template
+Title: Unofficial R Package for Thematic Visualization Inspired by the colors of the University of Maryland – College Park
 Version: 0.1.0
 Authors@R: c(
     person(
