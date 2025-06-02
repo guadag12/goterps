@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
   
-  # goterps 🐢❤️📦  <img src="img/hex/hex_goterps_logo.png" width="160px" align="right" />
+# goterps 🐢❤️📦  <img src="https://github.com/guadag12/goterps_image/blob/main/img/hex/hex_goterps_logo.png" width="160px" align="right" />
 
 ![version](https://img.shields.io/badge/version-0.0.0.1-green) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![](https://visitor-badge.glitch.me/badge?page_id=guadag12.goterps&style=flat-square&color=0088cc) 
 
@@ -27,7 +27,7 @@ This function runs the package template and saves it to the specified path on yo
 goterps_presentation(dest_dir = "~/Documents/test/")
 ```
 
-<img src="https://github.com/guadag12/goterps/blob/main/img/quarto_template1.png" width="500" /> <img src="https://github.com/guadag12/goterps/blob/main/img/quarto_template2.png" width="500" />
+<img src="https://github.com/guadag12/goterps_image/blob/main/img/quarto_template1.png" width="500" /> <img src="https://github.com/guadag12/goterps_image/blob/main/img/quarto_template2.png" width="500" />
 
 ### Make thematic plots in ggplot with goterps template!
 
@@ -42,7 +42,7 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
 ```
 
 <p align="center">
-  <img width="460" height="330" src="https://github.com/guadag12/goterps/blob/main/img/scatter_plain.png">
+  <img width="460" height="330" src="https://github.com/guadag12/goterps_image/blob/main/img/scatter_plain.png">
 </p>
 
 
@@ -61,7 +61,7 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
 ```
 
 <p align="center">
-  <img width="460" height="330" src="https://github.com/guadag12/goterps/blob/main/img/scatter1.png">
+  <img width="460" height="330" src="https://github.com/guadag12/goterps_image/blob/main/img/scatter1.png">
 </p>
 
 
@@ -80,7 +80,7 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
        color = "Species")
 ```
 <p align="center">
-  <img width="460" height="330" src="https://github.com/guadag12/goterps/blob/main/img/scales_continuos.png">
+  <img width="460" height="330" src="https://github.com/guadag12/goterps_image/blob/main/img/scales_continuos.png">
 </p>
 
 

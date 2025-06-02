@@ -2,7 +2,8 @@
 #'
 #' This function applies a custom theme to ggplot objects.
 #'
-#' @import ggplot2
+#' @importFrom ggplot2 theme_minimal theme element_text element_line
+#' @importFrom grid unit
 #' @export
 
 

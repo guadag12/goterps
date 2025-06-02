@@ -27,26 +27,6 @@ goterps_presentation <- function(item, dest_dir) {
   unlink(zip_file_path)
 }
 
-# goterps_presentation_x <- function(dest_dir = ".") {
-#   zip_file_path <- paste0(dest_dir, ".zip")
-#
-#   # Download the zip file
-#   download.file(
-#     url = "https://github.com/guadag12/goterps/raw/main/inst/extdata/_extensions/quarto_presentation.zip",
-#     destfile = zip_file_path
-#   )
-#
-#   # Create destination directory if it doesn't exist
-#   if (!dir.exists(dest_dir)) {
-#     dir.create(dest_dir, recursive = TRUE)
-#   }
-#
-#   # Unzip content into existing folder, overwriting only files with same name
-#   unzip(zipfile = zip_file_path, exdir = dest_dir, overwrite = TRUE)
-#
-#   # Clean up zip file
-#   unlink(zip_file_path)
-# }
 
 #' @examples
 # Example of how to call the function

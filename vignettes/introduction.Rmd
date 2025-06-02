@@ -10,7 +10,11 @@ vignette: >
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  warning = FALSE,
+  message = FALSE,
+  fig.height = 4,
+  fig.width = 6
 )
 
 library(goterps)
@@ -39,12 +43,14 @@ Use `goterps_presentation()` to download the Quarto presentation files locally:
 goterps_presentation(dest_dir = tempdir())
 ```
 
-<img src="https://github.com/guadag12/goterps/blob/main/img/quarto_template1.png" width="500" /> <img src="https://github.com/guadag12/goterps/blob/main/img/quarto_template2.png" width="500" />
+![](https://github.com/guadag12/goterps/raw/main/img/quarto_template1.png){width=40%}
+
+![](https://github.com/guadag12/goterps/raw/main/img/quarto_template2.png){width=40%}
 
 
 ## Example: Use goterps Theme and Palette with ggplot2
 
-```{r, eval = FALSE}
+```{r}
 ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
   geom_point(size = 4) +
   goterps_theme() +
@@ -53,15 +59,12 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
        y = "Sepal Width")
 ```
 
-<p align="center">
-  <img width="460" height="330" src="https://github.com/guadag12/goterps/blob/main/img/scatter_plain.png">
-</p>
 
 ## Discrete Color Palette
 
 Use `goterps_palette_d()` for discrete scales:
 
-```{r, eval = FALSE}
+```{r}
 ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
   geom_point(size = 4) +
   scale_color_manual(values = goterps_palette_d(3)) +
@@ -71,28 +74,22 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
        y = "Sepal Width")
 ```
 
-<p align="center">
-  <img width="460" height="330" src="https://github.com/guadag12/goterps/blob/main/img/scatter1.png">
-</p>
 
 
 ## Continuous Color Palette
 
 Use `goterps_palette_c()` for continuous color gradients:
 
-```{r, eval = FALSE}
+```{r}
 ggplot(iris[iris$Species == "setosa",], aes(x = Sepal.Width, y = Sepal.Length, color = Sepal.Length)) +
   geom_point(size = 4) +
-  scale_color_gradientn(colors = goterps_palette_c(5)) +
+  scale_color_gradientn(colors = goterps_palette_c("yellow", 5)) +
   goterps_theme() +
   labs(title = "Continuous Color Example",
        x = "Sepal Width",
        y = "Sepal Length")
 ```
 
-<p align="center">
-  <img width="460" height="330" src="https://github.com/guadag12/goterps/blob/main/img/scales_continuos.png">
-</p>
 
 ## Contact
 
