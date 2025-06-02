@@ -1,0 +1,103 @@
+---
+title: "Getting Started with goterps 🐢❤️📦"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with goterps 🐢❤️📦}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+library(goterps)
+library(ggplot2)
+```
+
+
+*goterps* is an R package designed for students and faculty at the University of Maryland. It helps create visualizations and presentations aligned with the university's visual identity.
+
+
+## Installation
+To install the development version from GitHub:
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("guadag12/goterps")
+library(goterps)
+```
+
+
+## Download the Quarto Presentation Template
+
+Use `goterps_presentation()` to download the Quarto presentation files locally:
+
+```{r, eval = FALSE}
+goterps_presentation(dest_dir = tempdir())
+```
+
+<img src="https://github.com/guadag12/goterps/blob/main/img/quarto_template1.png" width="500" /> <img src="https://github.com/guadag12/goterps/blob/main/img/quarto_template2.png" width="500" />
+
+
+## Example: Use goterps Theme and Palette with ggplot2
+
+```{r, eval = FALSE}
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point(size = 4) +
+  goterps_theme() +
+  labs(title = "Scatter Plot of Iris Data",
+       x = "Sepal Length",
+       y = "Sepal Width")
+```
+
+<p align="center">
+  <img width="460" height="330" src="https://github.com/guadag12/goterps/blob/main/img/scatter_plain.png">
+</p>
+
+## Discrete Color Palette
+
+Use `goterps_palette_d()` for discrete scales:
+
+```{r, eval = FALSE}
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(size = 4) +
+  scale_color_manual(values = goterps_palette_d(3)) +
+  goterps_theme() +
+  labs(title = "Discrete Color Example",
+       x = "Sepal Length",
+       y = "Sepal Width")
+```
+
+<p align="center">
+  <img width="460" height="330" src="https://github.com/guadag12/goterps/blob/main/img/scatter1.png">
+</p>
+
+
+## Continuous Color Palette
+
+Use `goterps_palette_c()` for continuous color gradients:
+
+```{r, eval = FALSE}
+ggplot(iris[iris$Species == "setosa",], aes(x = Sepal.Width, y = Sepal.Length, color = Sepal.Length)) +
+  geom_point(size = 4) +
+  scale_color_gradientn(colors = goterps_palette_c(5)) +
+  goterps_theme() +
+  labs(title = "Continuous Color Example",
+       x = "Sepal Width",
+       y = "Sepal Length")
+```
+
+<p align="center">
+  <img width="460" height="330" src="https://github.com/guadag12/goterps/blob/main/img/scales_continuos.png">
+</p>
+
+## Contact
+
+Feel free to reach out if you find bugs or have ideas to improve the package:
+
+📧 Email: [guadag12@umd.edu](mailto:guadag12@umd.edu)
+
+🐦 Twitter: [@guadag12](https://x.com/guadag12)

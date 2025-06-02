@@ -4,3 +4,6 @@ check_guada.R
 .Rhistory
 .RData
 .Ruserdata
+inst/doc
+/doc/
+/Meta/

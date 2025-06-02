@@ -27,11 +27,14 @@ goterps_palette_c <- function(theme, n) {
 }
 
 
-# Example on how to use the function
-# ggplot(iris[iris$Species == "setosa",], aes(x = Sepal.Width, y = Sepal.Length, color = Sepal.Length)) +
-#  geom_point(size = 4) +
-#  scale_color_gradientn(colors = goterps_palette_c("yellow",5)) +
-#  labs(x = "Sepal Width", y = "Sepal Length",
-#       title = "Scatter Plot of Iris Data Colored by Species") +
-#  goterps_theme() +
-#  theme(plot.title = element_text(hjust = 0.5))
+#' @examples
+#' # Example using goterps_palette_c and goterps_theme with ggplot2
+#' library(ggplot2)
+#' ggplot(iris[iris$Species == "setosa",], aes(x = Sepal.Width, y = Sepal.Length, color = Sepal.Length)) +
+#'   geom_point(size = 4) +
+#'   scale_color_gradientn(colors = goterps_palette_c("yellow", 5)) +
+#'   labs(
+#'     x = "Sepal Width", y = "Sepal Length",
+#'     title = "Scatter Plot of Iris Data Colored by Sepal Length"
+#'   ) +
+#'   theme(plot.title = element_text(hjust = 0.5))

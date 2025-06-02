@@ -31,3 +31,14 @@ goterps_theme <- function() {
 
     )
 }
+
+#' @examples
+# library(ggplot2)
+# ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+#  geom_point(size = 4) +
+#  goterps_theme() +
+#  scale_fill_manual(values = goterps_palette_d()) +
+#  labs(title = "Scatter Plot of Iris Data Colored by Species",
+#       x = "Sepal Length",
+#       y = "Sepal Width",
+#       color = "Species")
