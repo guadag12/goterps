@@ -8,8 +8,6 @@ goterps_palette_d(n)
 }
 \arguments{
 \item{n}{An integer. Number of gradient colors to generate.}
-
-\item{theme}{A character string. The base color theme to use. Options are "yellow", "red", or "grey".}
 }
 \description{
 This function applies a scale of UMD colors to continuous ggplot objects.
