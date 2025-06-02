@@ -4,7 +4,7 @@
 #'
 #' @param theme A character string. The base color theme to use. Options are "yellow", "red", or "grey".
 #' @param n An integer. Number of gradient colors to generate.
-#'
+#' @importFrom grDevices colorRampPalette
 #' @import ggplot2
 #' @export
 

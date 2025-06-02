@@ -43,9 +43,9 @@ Use `goterps_presentation()` to download the Quarto presentation files locally:
 goterps_presentation(dest_dir = tempdir())
 ```
 
-![](https://github.com/guadag12/goterps/raw/main/img/quarto_template1.png){width=40%}
+![](https://github.com/guadag12/goterps_image/raw/main/img/quarto_template1.png){width=40%}
 
-![](https://github.com/guadag12/goterps/raw/main/img/quarto_template2.png){width=40%}
+![](https://github.com/guadag12/goterps_image/raw/main/img/quarto_template2.png){width=40%}
 
 
 ## Example: Use goterps Theme and Palette with ggplot2
